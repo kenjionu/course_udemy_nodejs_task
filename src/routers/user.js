@@ -5,7 +5,8 @@ const auth = require('../middleware/auth')
 const router = new express.Router()
 const sharp = require('sharp')
 const  { sendWelcomeEmail, sendCancelationEmail } = require('../emails/account')
-const req = require('express/lib/request')
+
+
 router.post('/users', async (req, res) => {
     const user = new User(req.body)
 
